@@ -15,5 +15,15 @@ public class Main {
                 .build();
         System.out.println(person);
 
+        Shape[] shapes = new Shape[]{
+                new Circle(),
+                new Triangle(),
+                new Square()
+        };
+
+        for (Shape shape : shapes) {
+            shape.draw();
+        }
+
     }
 }
