@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.lists.ArrayList;
 import com.company.lists.LinkedList;
 import com.company.lists.MyIterator;
 import com.company.lists.MyList;
@@ -33,7 +34,7 @@ public class Main {
         myList.add("one");
         myList.add("two");
         myList.add("three");
-
+        myList.remove("two");
         MyIterator<String> iterator = myList.iterator();
         while (iterator.hasNext()) {
             String next = iterator.next();
@@ -41,6 +42,16 @@ public class Main {
         }
 
         System.out.println(myList.get(1));
+
+
+        MyList<Integer> myArray = new ArrayList<>(2);
+        myArray.add(1);
+        myArray.add(2);
+        myArray.add(3);
+        myArray.remove(2);
+        for (int i = 0; i < myArray.size(); i++){
+            System.out.println(myArray.get(i));
+        }
 
     }
 }
