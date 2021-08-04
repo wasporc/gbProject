@@ -1,5 +1,9 @@
 package com.company;
 
+import com.company.lists.LinkedList;
+import com.company.lists.MyIterator;
+import com.company.lists.MyList;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -24,6 +28,19 @@ public class Main {
         for (Shape shape : shapes) {
             shape.draw();
         }
+
+        MyList<String> myList = new LinkedList<>();
+        myList.add("one");
+        myList.add("two");
+        myList.add("three");
+
+        MyIterator<String> iterator = myList.iterator();
+        while (iterator.hasNext()) {
+            String next = iterator.next();
+            System.out.println(next);
+        }
+
+        System.out.println(myList.get(1));
 
     }
 }
