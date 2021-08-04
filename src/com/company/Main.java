@@ -3,6 +3,27 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        Person person = new Person.Builder()
+                .age(10)
+                .address("address")
+                .country("country")
+                .lastName("Last Name")
+                .middleName("Middle Name")
+                .gender("Robot")
+                .phone("Phone")
+                .firstName("First Name")
+                .build();
+        System.out.println(person);
+
+        Shape[] shapes = new Shape[]{
+                new Circle(),
+                new Triangle(),
+                new Square()
+        };
+
+        for (Shape shape : shapes) {
+            shape.draw();
+        }
+
     }
 }

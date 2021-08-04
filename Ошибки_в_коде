@@ -1,0 +1,6 @@
+class Lorry extends Car, Moveable, Stopable - ошибка в множественном наследовании. Решение: class Lorry extends Car implements Moveable, Stopable.
+class Lorry extends Car - не переопределен метод abstract void open()
+
+class Engine  не реализован.
+
+У классов нет модификатора доступа.
