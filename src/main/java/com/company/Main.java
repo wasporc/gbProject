@@ -1,4 +1,4 @@
-package main.java.com.company;
+package com.company;
 
 import com.company.lists.ArrayList;
 import com.company.lists.LinkedList;

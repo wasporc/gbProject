@@ -1,4 +1,4 @@
-package main.java.com.company;
+package com.company.hibernate;
 
 public class HibernateTest {
     public static void main(String[] args) {
