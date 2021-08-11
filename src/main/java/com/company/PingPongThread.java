@@ -1,4 +1,4 @@
-package com.company;
+package main.java.com.company;
 
 public class PingPongThread implements Runnable{
     private Object LOCK_OBJECT;

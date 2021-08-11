@@ -1,4 +1,4 @@
-package com.company;
+package main.java.com.company;
 
 public class Triangle implements Shape{
     @Override
