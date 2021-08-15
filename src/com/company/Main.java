@@ -5,10 +5,13 @@ import com.company.lists.LinkedList;
 import com.company.lists.MyIterator;
 import com.company.lists.MyList;
 
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 public class Main {
 
     public static void main(String[] args) {
-        Person person = new Person.Builder()
+        /*Person person = new Person.Builder()
                 .age(10)
                 .address("address")
                 .country("country")
@@ -52,6 +55,11 @@ public class Main {
         for (int i = 0; i < myArray.size(); i++){
             System.out.println(myArray.get(i));
         }
-
+*/
+        Object LOCK_OBJECT = new Object();
+        Thread ping = new Thread(new PingPongThread(LOCK_OBJECT, "Ping"));
+        Thread pong = new Thread(new PingPongThread(LOCK_OBJECT, "Pong"));
+        ping.start();
+        pong.start();
     }
 }
